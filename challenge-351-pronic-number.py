@@ -18,15 +18,12 @@
 def is_pronic(n):
     if n == 0:
         return True
-    elif n == 1:
-        return False
     else:
         i = 1
-        pronic = False
-        while not pronic and (i * (i + 1)) <= n:
+        while (i * (i + 1)) <= n:
             if (i * (i + 1)) == n:
-                pronic = True
+                return True
             i += 1
-    return pronic
+    return False
 
 print(is_pronic(6))
